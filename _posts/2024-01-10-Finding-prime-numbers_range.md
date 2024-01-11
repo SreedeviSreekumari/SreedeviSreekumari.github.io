@@ -2,7 +2,7 @@
 layout: post
 title: Finding Prime Numbers with Python
 description: Python to find prime numbers between a given range of integer numbers
-image: "/posts/Primes_Range.png"
+image: "/posts/Primes_Range.jpg"
 tags: [Python, Primes]
 ---
 
