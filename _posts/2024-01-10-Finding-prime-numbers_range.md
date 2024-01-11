@@ -14,7 +14,7 @@ Let's get into it!
 
 ---
 
-First let's decide what we need from the user and how we can it be used in a function. Our intention here is to get receive two input values for the number range and use it as lower and upper boundaries to find prime numbers. So let's ask the user to input those values by using Input statement. 
+First let's decide what we need from the user and how we can it be used in a function. Our intention here is to receive two input values for the number range and use it as lower and upper boundaries to find prime numbers. So let's ask the user to input those values by using Input statement. 
 
 ```ruby
 # pass lower and upper bound as input parameter
@@ -113,6 +113,7 @@ There are 12 prime numbers between 12 and 60.Prime numbers found are [13, 17, 19
 ```
 
 Let's print and see what values the variables hold.
+```ruby
 print(l_bound)
 >>> 12
 
@@ -121,17 +122,19 @@ print(u_bound)
 
 print(num_cnt)
 >>> 48
-
+```
 Since num_cnt is greater than 0, prime_finder function is invoked. 
-
+```ruby
 num_range = list(range(12,61))
 print(num_range)
 >>> [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 58, 59, 60]
-
+```
+```ruby
 # Empty prime_list created.
 prime_list = []
 >>> []
-
+```
+```ruby
 # The first element of For loop is going to be 12. We are assuming this as Prime by setting the flag true unless it is proved otherwise.
 for i in num_range:
     prime_flag = True
@@ -140,9 +143,9 @@ for i in num_range:
     if i > 1: 
         check_range = range(2,i)
 
-        # for each element of check_range, see if 12 is completely divisible by that number. First check_range number is going to be 2.So we would be checking if           12 modulus 2 is zero. If so, consider 12 as non prime and set prime_flag to False.Else, continue finding modulus of 12 with 3,4,5 and so on upto 11 to             see any of those gives remainder non-zero. 
+        # for each element of check_range, see if 12 is completely divisible by that number. First check_range number is going to be 2.So we would be checking if 12 modulus 2 is zero. If so, consider 12 as non prime and set prime_flag to False.Else, continue finding modulus of 12 with 3,4,5 and so on upto 11 to see any of those gives remainder non-zero. 
             
-          So here, 12 modulus 2 is 0 and hence it is not prime. Set prime_flag to False. Since we now know that 12 is not a prime, we do not want to continue               looking modulus with other numbers and so break the iteration and conitunue with our next number from num_range which is 13.
+          So here, 12 modulus 2 is 0 and hence it is not prime. Set prime_flag to False. Since we now know that 12 is not a prime, we do not want to continue looking modulus with other numbers and so break the iteration and conitunue with our next number from num_range which is 13.
         
         for j in check_range:
             if(i % j) == 0:
@@ -152,6 +155,6 @@ for i in num_range:
         
         if prime_flag == True:
             prime_list.append(i)
-    
+```   
             
 I hoped you enjoyed learning about Primes, and one way to search for them using Python.
