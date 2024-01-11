@@ -6,7 +6,7 @@ image: "/posts/Primes_Range.jpg"
 tags: [Python, Primes]
 ---
 
-In this post I'm going to run through a function in Python that can quickly find all the Prime numbers between a range given by user.  For example, if user passed the values 12 and 60, it would find all the prime numbers between 12 and 60(both inclusive) using a Python function!
+In this post I'm going to explain a different way to quickly find all the Prime numbers between a range given by user.  For example, if user passed the values 12 and 60, it would find all the prime numbers between 12 and 60(both inclusive) using a Python function!
 
 If you're not sure what a Prime number is, it is a number that can only be divided wholly by itself and one so 7 is a prime number as no other numbers apart from 7 or 1 divide cleanly into it 8 is not a prime number as while eight and one divide into it, so do 2 and 4
 
