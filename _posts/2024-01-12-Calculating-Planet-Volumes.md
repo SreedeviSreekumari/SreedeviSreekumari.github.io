@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Calculating Planet Volume
-description: Using Python Numpy to calculate Planet Volumes
+description: Python Numpy to calculate Planet Volumes
 image: "/posts/Planet_Volume.jpg"
 tags: [Python, Numpy]
 ---
