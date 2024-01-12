@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Calculating Planet Volume using Python-Numpy
+title: Calculating Planet Volume
 description: Using Python Numpy to calculate Planet Volumes
 image: "/posts/Planet_Volume.jpg"
 tags: [Python, Numpy]
@@ -14,13 +14,14 @@ Volume = 4/3 * pi * radii ** 3
 So here, we would need pi value and radii for volume computation.
 
 As per google data, radii of planets (in kilometers) are as follows.
-Mercury - 2439.7 
-Venus 	- 6051.8 
-Earth 	- 6371 
-Mars 	  - 3389.7
-Jupiter - 69911
-Saturn	- 58232
-Uranus	- 25362
+
+Mercury - 2439.7 |
+Venus 	- 6051.8  |
+Earth 	- 6371    |
+Mars 	  - 3389.7 |
+Jupiter - 69911  |
+Saturn	- 58232   |
+Uranus	- 25362   |
 Neptune	- 24622
 
 Let's see how can we use this data for calculation.
