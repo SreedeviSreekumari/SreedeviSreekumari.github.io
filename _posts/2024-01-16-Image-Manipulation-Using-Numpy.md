@@ -20,7 +20,7 @@ Read the image required for manipulation using 'imread' function and specify the
 camaro = io.imread("camaro.jpg")
 print(camaro)
 ```
-!https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro.jpg
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro.jpg">
 
 Let's find out what shape is camaro object.
 
