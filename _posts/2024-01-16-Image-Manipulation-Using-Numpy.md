@@ -20,6 +20,23 @@ Read the image required for manipulation using 'imread' function and specify the
 camaro = io.imread("camaro.jpg")
 print(camaro)
 ```
+Result of the print will be an array of values as below which constitute the camaro.jpg.
+
+[[[ 83  81  43]
+  [ 57  54  19]
+  [ 34  31   0]
+  ...
+  [179 144 112]
+  [179 144 114]
+  [179 144 114]]
+
+ [[ 95  93  55]
+  [ 72  69  34]
+  [ 46  43   8]
+  ...
+  [181 146 114]
+  [181 146 116]
+
 Let's find out what shape is camaro object.
 
 ```ruby
@@ -41,12 +58,16 @@ The third dimension here is pixel intensity for which integer values range from 
   plt.imshow(cropped)
   plt.show
 ```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_vertical_crop.jpg">
+
 ```ruby
 # Crop the image horizontally and display the image. This would mean that x axis will be affected.
   cropped = camaro[:,0:500,:]
   plt.imshow(cropped)
   plt.show
 ```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_horizontal_crop.jpg">
+
 ```ruby
 # Now let's try to crop just the car perfectly
   cropped = camaro[350:1100,200:1400,:]
@@ -54,6 +75,7 @@ The third dimension here is pixel intensity for which integer values range from 
   plt.show
 ```
 <img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_cropped.jpg">
+
 ```ruby
 # To save the image to disk
   io.imsave("camaro_cropped.jpg",cropped)
@@ -99,6 +121,7 @@ red[:,:,0] = camaro[:,:,0]
 plt.imshow(red)
 plt.show
 ```   
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_red_channel.jpg">
 
 Now let's repeat this for green and blue channels.
 ```ruby
@@ -106,11 +129,17 @@ green = np.zeros(camaro.shape,dtype = "uint8")
 green[:,:,1] = camaro[:,:,1]
 plt.imshow(green)
 plt.show
+```  
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_green_channel.jpg">
 
+```ruby
 blue = np.zeros(camaro.shape,dtype = "uint8")  
 blue[:,:,2] = camaro[:,:,2]
 plt.imshow(blue)
 plt.show
+```  
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_blue_channel.jpg">
+
 ``` 
 In numpy, it is possible to stack arrays vertically and horizontally. Right now, we have the image as numpy array values with us. Let's see how we can stack them.
 ```ruby
