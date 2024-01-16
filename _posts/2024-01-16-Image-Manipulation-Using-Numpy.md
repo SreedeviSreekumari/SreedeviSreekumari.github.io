@@ -20,8 +20,6 @@ Read the image required for manipulation using 'imread' function and specify the
 camaro = io.imread("camaro.jpg")
 print(camaro)
 ```
-<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro.jpg">
-
 Let's find out what shape is camaro object.
 
 ```ruby
@@ -35,6 +33,8 @@ The third dimension here is pixel intensity for which integer values range from 
   plt.imshow(camaro)
   plt.show
 ```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro.jpg">
+
 ```ruby
 # Crop the image vertically and display the image. This would mean that y axis will be affected.
   cropped = camaro[0:500,:,:]
@@ -53,6 +53,7 @@ The third dimension here is pixel intensity for which integer values range from 
   plt.imshow(cropped)
   plt.show
 ```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_cropped.jpg">
 ```ruby
 # To save the image to disk
   io.imsave("camaro_cropped.jpg",cropped)
@@ -67,13 +68,23 @@ To indicate which flip we are looking for, use -1 in the designated position.
 # Display flipped image
   plt.imshow(vertical_flip)
   plt.show
+```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_vertical_flip.jpg">
+
+```ruby
 # Save vertically flipped image
   io.imsave("camaro_vertical_flip.jpg",vertical_flip)
+```
+```ruby
 # Horizontal flip
   horizontal_flip = camaro[:,::-1,:]
 # Display flipped image
   plt.imshow(horizontal_flip)
   plt.show
+```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_horizontal_flip.jpg">
+
+```ruby
 # Save horizontally flipped image
   io.imsave("camaro_horizontal_flip.jpg",horizontal_flip)
 ```
@@ -107,6 +118,10 @@ In numpy, it is possible to stack arrays vertically and horizontally. Right now,
   camaro_rainbow_vstack = np.vstack((red,green,blue))
   plt.imshow(camaro_rainbow_vstack)
   plt.show
+```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_vstack.jpg">
+
+```ruby
 # Save the vertically stacked image
   io.imsave("camaro_vstack.jpg",camaro_rainbow_vstack)
 ``` 
@@ -116,6 +131,10 @@ In numpy, it is possible to stack arrays vertically and horizontally. Right now,
   camaro_rainbow_hstack = np.hstack((red,green,blue))
   plt.imshow(camaro_rainbow)
   plt.show
-# Save the horizontally stacked image
+```
+<img src="https://raw.githubusercontent.com/SreedeviSreekumari/SreedeviSreekumari.github.io/master/img/posts/camaro_hstack.jpg">
 
+```ruby
+# Save the horizontally stacked image
 io.imsave("camaro_hstack.jpg",camaro_rainbow_hstack)
+```
